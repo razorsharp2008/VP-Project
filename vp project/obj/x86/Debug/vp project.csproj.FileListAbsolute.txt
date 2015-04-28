@@ -1,11 +1,13 @@
-C:\Users\Abdul Ahad\Desktop\VP\vp project\vp project\bin\Debug\vp project.exe
-C:\Users\Abdul Ahad\Desktop\VP\vp project\vp project\bin\Debug\vp project.pdb
 C:\Users\Abdul Ahad\Desktop\VP\vp project\vp project\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Abdul Ahad\Desktop\VP\vp project\vp project\obj\x86\Debug\vp_project.Allow.resources
 C:\Users\Abdul Ahad\Desktop\VP\vp project\vp project\obj\x86\Debug\vp_project.block.resources
 C:\Users\Abdul Ahad\Desktop\VP\vp project\vp project\obj\x86\Debug\vp_project.Form1.resources
 C:\Users\Abdul Ahad\Desktop\VP\vp project\vp project\obj\x86\Debug\vp_project.login.resources
+C:\Users\Abdul Ahad\Desktop\VP\vp project\vp project\obj\x86\Debug\vp_project.Main_menu.resources
 C:\Users\Abdul Ahad\Desktop\VP\vp project\vp project\obj\x86\Debug\vp_project.Properties.Resources.resources
 C:\Users\Abdul Ahad\Desktop\VP\vp project\vp project\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Users\Abdul Ahad\Desktop\VP\vp project\vp project\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Abdul Ahad\Desktop\VP\vp project\vp project\bin\Debug\vp project.exe
+C:\Users\Abdul Ahad\Desktop\VP\vp project\vp project\bin\Debug\vp project.pdb
 C:\Users\Abdul Ahad\Desktop\VP\vp project\vp project\obj\x86\Debug\vp project.exe
 C:\Users\Abdul Ahad\Desktop\VP\vp project\vp project\obj\x86\Debug\vp project.pdb

@@ -16,6 +16,19 @@ namespace vp_project
             InitializeComponent();
         }
 
+        private void start_Click(object sender, EventArgs e)
+        {
+            Hide();
+            login obj = new login();
+            obj.Show();
+        }
+
+        private void end_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(1);
+        }
+
+        
       
     }
 }

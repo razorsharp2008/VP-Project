@@ -15,5 +15,26 @@ namespace vp_project
         {
             InitializeComponent();
         }
+
+        private void block_Click(object sender, EventArgs e)
+        {
+            block obj = new block();
+            obj.Show();
+            Hide();
+        }
+
+        private void allow_Click(object sender, EventArgs e)
+        {
+            Allow obj1 = new Allow();
+            obj1.Show();
+            Hide();
+        }
+
+        private void end_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(1);
+        }
+
+
     }
 }

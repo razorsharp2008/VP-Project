@@ -30,8 +30,8 @@
         {
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.start = new System.Windows.Forms.Button();
+            this.end = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,31 +54,33 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "ACCESS CONTROL      MECHANISM";
             // 
-            // button1
+            // start
             // 
-            this.button1.Location = new System.Drawing.Point(332, 366);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(102, 27);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Begin";
-            this.button1.UseVisualStyleBackColor = true;
+            this.start.Location = new System.Drawing.Point(332, 366);
+            this.start.Name = "start";
+            this.start.Size = new System.Drawing.Size(102, 27);
+            this.start.TabIndex = 4;
+            this.start.Text = "Begin";
+            this.start.UseVisualStyleBackColor = true;
+            this.start.Click += new System.EventHandler(this.start_Click);
             // 
-            // button2
+            // end
             // 
-            this.button2.Location = new System.Drawing.Point(332, 424);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(101, 24);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Exit";
-            this.button2.UseVisualStyleBackColor = true;
+            this.end.Location = new System.Drawing.Point(332, 424);
+            this.end.Name = "end";
+            this.end.Size = new System.Drawing.Size(101, 24);
+            this.end.TabIndex = 5;
+            this.end.Text = "Exit";
+            this.end.UseVisualStyleBackColor = true;
+            this.end.Click += new System.EventHandler(this.end_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(688, 506);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.end);
+            this.Controls.Add(this.start);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox3);
             this.Name = "Form1";
@@ -92,8 +94,8 @@
 
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button start;
+        private System.Windows.Forms.Button end;
     }
 }
 

@@ -15,5 +15,14 @@ namespace vp_project
         {
             InitializeComponent();
         }
+
+        private void start_Click(object sender, EventArgs e)
+        {
+            Main_menu obj = new Main_menu();
+            obj.Show();
+            Hide();
+        }
+
+       
     }
 }
