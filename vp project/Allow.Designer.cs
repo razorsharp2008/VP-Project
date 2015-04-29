@@ -33,13 +33,13 @@
             this.checkBox5 = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.start = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
+            this.save_changes = new System.Windows.Forms.Button();
+            this.reset_checked = new System.Windows.Forms.CheckBox();
+            this.all_checked = new System.Windows.Forms.CheckBox();
+            this.floppy_check = new System.Windows.Forms.CheckBox();
+            this.phone_check = new System.Windows.Forms.CheckBox();
+            this.usb_check = new System.Windows.Forms.CheckBox();
+            this.dvd_check = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -91,7 +91,7 @@
             // 
             // start
             // 
-            this.start.Location = new System.Drawing.Point(-1, 32);
+            this.start.Location = new System.Drawing.Point(8, 32);
             this.start.Name = "start";
             this.start.Size = new System.Drawing.Size(110, 26);
             this.start.TabIndex = 32;
@@ -99,69 +99,82 @@
             this.start.UseVisualStyleBackColor = true;
             this.start.Click += new System.EventHandler(this.start_Click);
             // 
-            // button3
+            // save_changes
             // 
-            this.button3.Location = new System.Drawing.Point(214, 336);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(137, 26);
-            this.button3.TabIndex = 31;
-            this.button3.Text = "Apply changes";
-            this.button3.UseVisualStyleBackColor = true;
+            this.save_changes.Location = new System.Drawing.Point(214, 336);
+            this.save_changes.Name = "save_changes";
+            this.save_changes.Size = new System.Drawing.Size(137, 26);
+            this.save_changes.TabIndex = 31;
+            this.save_changes.Text = "Apply changes";
+            this.save_changes.UseVisualStyleBackColor = true;
+            this.save_changes.Click += new System.EventHandler(this.save_changes_Click);
             // 
-            // checkBox1
+            // reset_checked
             // 
-            this.checkBox1.Location = new System.Drawing.Point(7, 37);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(91, 17);
-            this.checkBox1.TabIndex = 30;
-            this.checkBox1.Text = "Reset";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.reset_checked.AutoCheck = false;
+            this.reset_checked.Location = new System.Drawing.Point(7, 37);
+            this.reset_checked.Name = "reset_checked";
+            this.reset_checked.Size = new System.Drawing.Size(91, 17);
+            this.reset_checked.TabIndex = 30;
+            this.reset_checked.Text = "Reset";
+            this.reset_checked.UseVisualStyleBackColor = true;
+            this.reset_checked.Click += new System.EventHandler(this.reset_checked_Click);
             // 
-            // checkBox2
+            // all_checked
             // 
-            this.checkBox2.Location = new System.Drawing.Point(7, 5);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(91, 17);
-            this.checkBox2.TabIndex = 29;
-            this.checkBox2.Text = "Select All";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.all_checked.AutoCheck = false;
+            this.all_checked.Location = new System.Drawing.Point(7, 5);
+            this.all_checked.Name = "all_checked";
+            this.all_checked.Size = new System.Drawing.Size(91, 17);
+            this.all_checked.TabIndex = 29;
+            this.all_checked.Text = "Select All";
+            this.all_checked.UseVisualStyleBackColor = true;
+            this.all_checked.Click += new System.EventHandler(this.all_checked_Click);
             // 
-            // checkBox4
+            // floppy_check
             // 
-            this.checkBox4.Location = new System.Drawing.Point(18, 154);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(91, 17);
-            this.checkBox4.TabIndex = 28;
-            this.checkBox4.Text = "Floppy";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.floppy_check.AutoCheck = false;
+            this.floppy_check.Location = new System.Drawing.Point(18, 154);
+            this.floppy_check.Name = "floppy_check";
+            this.floppy_check.Size = new System.Drawing.Size(91, 17);
+            this.floppy_check.TabIndex = 28;
+            this.floppy_check.Text = "Floppy";
+            this.floppy_check.UseVisualStyleBackColor = true;
+            this.floppy_check.Click += new System.EventHandler(this.floppy_check_Click);
             // 
-            // checkBox3
+            // phone_check
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(18, 116);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(91, 17);
-            this.checkBox3.TabIndex = 27;
-            this.checkBox3.Text = "Mobile Phone";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.phone_check.AutoCheck = false;
+            this.phone_check.AutoSize = true;
+            this.phone_check.Location = new System.Drawing.Point(18, 116);
+            this.phone_check.Name = "phone_check";
+            this.phone_check.Size = new System.Drawing.Size(91, 17);
+            this.phone_check.TabIndex = 27;
+            this.phone_check.Text = "Mobile Phone";
+            this.phone_check.UseVisualStyleBackColor = true;
+            this.phone_check.Click += new System.EventHandler(this.phone_check_Click);
             // 
-            // checkBox7
+            // usb_check
             // 
-            this.checkBox7.Location = new System.Drawing.Point(18, 79);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(91, 17);
-            this.checkBox7.TabIndex = 26;
-            this.checkBox7.Text = "USB";
-            this.checkBox7.UseVisualStyleBackColor = true;
+            this.usb_check.AutoCheck = false;
+            this.usb_check.Location = new System.Drawing.Point(18, 79);
+            this.usb_check.Name = "usb_check";
+            this.usb_check.Size = new System.Drawing.Size(91, 17);
+            this.usb_check.TabIndex = 26;
+            this.usb_check.Text = "USB";
+            this.usb_check.UseVisualStyleBackColor = true;
+            this.usb_check.Click += new System.EventHandler(this.usb_check_Click);
             // 
-            // checkBox8
+            // dvd_check
             // 
-            this.checkBox8.Location = new System.Drawing.Point(18, 47);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(91, 17);
-            this.checkBox8.TabIndex = 25;
-            this.checkBox8.Text = "DVD";
-            this.checkBox8.UseVisualStyleBackColor = true;
+            this.dvd_check.AutoCheck = false;
+            this.dvd_check.Location = new System.Drawing.Point(18, 47);
+            this.dvd_check.Name = "dvd_check";
+            this.dvd_check.Size = new System.Drawing.Size(91, 17);
+            this.dvd_check.TabIndex = 25;
+            this.dvd_check.Text = "DVD";
+            this.dvd_check.UseVisualStyleBackColor = true;
+            this.dvd_check.Click += new System.EventHandler(this.dvd_check_Click);
             // 
             // label2
             // 
@@ -194,10 +207,10 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.checkBox4);
-            this.panel1.Controls.Add(this.checkBox3);
-            this.panel1.Controls.Add(this.checkBox7);
-            this.panel1.Controls.Add(this.checkBox8);
+            this.panel1.Controls.Add(this.floppy_check);
+            this.panel1.Controls.Add(this.phone_check);
+            this.panel1.Controls.Add(this.usb_check);
+            this.panel1.Controls.Add(this.dvd_check);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(196, 108);
             this.panel1.Name = "panel1";
@@ -207,8 +220,8 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.checkBox1);
-            this.panel2.Controls.Add(this.checkBox2);
+            this.panel2.Controls.Add(this.reset_checked);
+            this.panel2.Controls.Add(this.all_checked);
             this.panel2.Location = new System.Drawing.Point(12, 285);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(106, 64);
@@ -222,7 +235,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.start);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.save_changes);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button2);
@@ -247,13 +260,13 @@
         private System.Windows.Forms.CheckBox checkBox5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button start;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox7;
-        private System.Windows.Forms.CheckBox checkBox8;
+        private System.Windows.Forms.Button save_changes;
+        private System.Windows.Forms.CheckBox reset_checked;
+        private System.Windows.Forms.CheckBox all_checked;
+        private System.Windows.Forms.CheckBox floppy_check;
+        private System.Windows.Forms.CheckBox phone_check;
+        private System.Windows.Forms.CheckBox usb_check;
+        private System.Windows.Forms.CheckBox dvd_check;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;

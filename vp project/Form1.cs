@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Microsoft.Win32;
 
 namespace vp_project
 {
@@ -26,6 +27,11 @@ namespace vp_project
         private void end_Click(object sender, EventArgs e)
         {
             Environment.Exit(1);
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
 
         

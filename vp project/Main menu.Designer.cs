@@ -97,6 +97,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "Main_menu";
             this.Text = "Main_menu";
+            this.Load += new System.EventHandler(this.Main_menu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
