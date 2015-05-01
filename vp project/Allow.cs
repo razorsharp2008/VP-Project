@@ -26,10 +26,36 @@ namespace vp_project
 
         private void save_changes_Click(object sender, EventArgs e)
         {
-            if (dvd_check.Checked == true || floppy_check.Checked == true || dvd_check.Checked == true ||
-               phone_check.Checked == true)
+            if ((dvd_check.Checked == true) || (usb_check.Checked == true) || (floppy_check.Checked == true) ||
+                (phone_check.Checked == true))
             {
-                MessageBox.Show("Selected devices can be accessed");
+                if (dvd_check.Checked == true)
+                {
+                    RegistryKey key = Registry.LocalMachine.OpenSubKey
+               ("SYSTEM\\CurrentControlSet\\Control\\StorageDevicePolicies", true);
+                    if (key != null)
+                    {
+                        key.SetValue("WriteProtect", 0, RegistryValueKind.DWord);
+                    }
+                    key.Close();
+                    MessageBox.Show("DVD access is allowed");
+                }
+
+                if (usb_check.Checked == true)
+                {
+                    Microsoft.Win32.Registry.SetValue(@"HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\USBSTOR", "Start", 3, Microsoft.Win32.RegistryValueKind.DWord);
+                    MessageBox.Show("USB access is allowed");
+                }
+
+                if (phone_check.Checked == true)
+                {
+                    MessageBox.Show("Mobile phone access is allowed");
+                }
+
+                if (floppy_check.Checked == true)
+                {
+                    MessageBox.Show("Floppy access is allowed");
+                }
             }
 
             else
@@ -124,6 +150,13 @@ namespace vp_project
             {
                 dvd_check.Checked = false;
             }
-        }  
+        }
+
+        private void usb_check_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }

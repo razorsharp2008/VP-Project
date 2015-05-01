@@ -43,6 +43,9 @@ namespace vp_project
                 MessageBox.Show("Incorrect user name or password");
         }
 
-       
+        private void login_Load(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

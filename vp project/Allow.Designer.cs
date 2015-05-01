@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Allow));
             this.button2 = new System.Windows.Forms.Button();
             this.checkBox6 = new System.Windows.Forms.CheckBox();
             this.checkBox5 = new System.Windows.Forms.CheckBox();
@@ -134,7 +135,7 @@
             // floppy_check
             // 
             this.floppy_check.AutoCheck = false;
-            this.floppy_check.Location = new System.Drawing.Point(18, 154);
+            this.floppy_check.Location = new System.Drawing.Point(18, 147);
             this.floppy_check.Name = "floppy_check";
             this.floppy_check.Size = new System.Drawing.Size(91, 17);
             this.floppy_check.TabIndex = 28;
@@ -146,7 +147,7 @@
             // 
             this.phone_check.AutoCheck = false;
             this.phone_check.AutoSize = true;
-            this.phone_check.Location = new System.Drawing.Point(18, 116);
+            this.phone_check.Location = new System.Drawing.Point(18, 112);
             this.phone_check.Name = "phone_check";
             this.phone_check.Size = new System.Drawing.Size(91, 17);
             this.phone_check.TabIndex = 27;
@@ -157,12 +158,13 @@
             // usb_check
             // 
             this.usb_check.AutoCheck = false;
-            this.usb_check.Location = new System.Drawing.Point(18, 79);
+            this.usb_check.Location = new System.Drawing.Point(18, 80);
             this.usb_check.Name = "usb_check";
             this.usb_check.Size = new System.Drawing.Size(91, 17);
             this.usb_check.TabIndex = 26;
             this.usb_check.Text = "USB";
             this.usb_check.UseVisualStyleBackColor = true;
+            this.usb_check.CheckedChanged += new System.EventHandler(this.usb_check_CheckedChanged);
             this.usb_check.Click += new System.EventHandler(this.usb_check_Click);
             // 
             // dvd_check
@@ -229,6 +231,7 @@
             // 
             // Allow
             // 
+            this.AcceptButton = this.save_changes;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(557, 396);
@@ -242,6 +245,8 @@
             this.Controls.Add(this.checkBox6);
             this.Controls.Add(this.checkBox5);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Allow";
             this.Text = "Allow";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

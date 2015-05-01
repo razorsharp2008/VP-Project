@@ -26,10 +26,43 @@ namespace vp_project
 
         private void save_changes_Click(object sender, EventArgs e)
         {
-            if (dvd_check.Checked == true || floppy_check.Checked == true || dvd_check.Checked == true ||
-               phone_check.Checked == true)
+            if ((dvd_check.Checked == true) || (usb_check.Checked == true) || (floppy_check.Checked == true) ||
+               (phone_check.Checked == true))
             {
-                MessageBox.Show("Selected devices are blocked");
+                if (dvd_check.Checked == true)
+                {
+                    RegistryKey key = Registry.LocalMachine.OpenSubKey
+              ("SYSTEM\\CurrentControlSet\\Control\\StorageDevicePolicies", true);
+                    if (key == null)
+                    {
+                        Registry.LocalMachine.CreateSubKey
+                            ("SYSTEM\\CurrentControlSet\\Control\\StorageDevicePolicies", RegistryKeyPermissionCheck.ReadWriteSubTree);
+                        key = Registry.LocalMachine.OpenSubKey
+                        ("SYSTEM\\CurrentControlSet\\Control\\StorageDevicePolicies", true);
+                        key.SetValue("WriteProtect", 1, RegistryValueKind.DWord);
+                    }
+                    else if (key.GetValue("WriteProtect") != (object)(1))
+                    {
+                        key.SetValue("WriteProtect", 1, RegistryValueKind.DWord);
+                    }
+                    MessageBox.Show("DVD access is blocked");
+                }
+
+                if (usb_check.Checked == true)
+                {
+                    Microsoft.Win32.Registry.SetValue(@"HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\USBSTOR", "Start", 4, Microsoft.Win32.RegistryValueKind.DWord);
+                   
+                    MessageBox.Show("USB access is blocked");
+                }
+
+                if (phone_check.Checked == true)
+                {
+                    MessageBox.Show("Mobile phone access is blocked");
+                }
+                if (floppy_check.Checked == true)
+                {
+                    MessageBox.Show("Floppy access is blocked");
+                }
             }
 
             else
