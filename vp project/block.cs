@@ -31,20 +31,7 @@ namespace vp_project
             {
                 if (dvd_check.Checked == true)
                 {
-                    RegistryKey key = Registry.LocalMachine.OpenSubKey
-              ("SYSTEM\\CurrentControlSet\\Control\\StorageDevicePolicies", true);
-                    if (key == null)
-                    {
-                        Registry.LocalMachine.CreateSubKey
-                            ("SYSTEM\\CurrentControlSet\\Control\\StorageDevicePolicies", RegistryKeyPermissionCheck.ReadWriteSubTree);
-                        key = Registry.LocalMachine.OpenSubKey
-                        ("SYSTEM\\CurrentControlSet\\Control\\StorageDevicePolicies", true);
-                        key.SetValue("WriteProtect", 1, RegistryValueKind.DWord);
-                    }
-                    else if (key.GetValue("WriteProtect") != (object)(1))
-                    {
-                        key.SetValue("WriteProtect", 1, RegistryValueKind.DWord);
-                    }
+                    Microsoft.Win32.Registry.SetValue(@"HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\cdrom", "Start", 4, Microsoft.Win32.RegistryValueKind.DWord);
                     MessageBox.Show("DVD access is blocked");
                 }
 
@@ -57,10 +44,28 @@ namespace vp_project
 
                 if (phone_check.Checked == true)
                 {
+                    RegistryKey key = Registry.LocalMachine.OpenSubKey
+               ("SYSTEM\\CurrentControlSet\\Control\\StorageDevicePolicies", true);
+                    if (key == null)
+                    {
+                        Registry.LocalMachine.CreateSubKey
+                            ("SYSTEM\\CurrentControlSet\\Control\\StorageDevicePolicies", RegistryKeyPermissionCheck.ReadWriteSubTree);
+                        key = Registry.LocalMachine.OpenSubKey
+                        ("SYSTEM\\CurrentControlSet\\Control\\StorageDevicePolicies", true);
+                        key.SetValue("WriteProtect", 1, RegistryValueKind.DWord);
+                    }
+
+                    else if (key.GetValue("WriteProtect") != (object)(1))
+                    {
+                        key.SetValue("WriteProtect", 1, RegistryValueKind.DWord);
+                    }
+
                     MessageBox.Show("Mobile phone access is blocked");
                 }
+
                 if (floppy_check.Checked == true)
                 {
+                    Microsoft.Win32.Registry.SetValue(@"HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\flpydisk", "Start", 4, Microsoft.Win32.RegistryValueKind.DWord);
                     MessageBox.Show("Floppy access is blocked");
                 }
             }

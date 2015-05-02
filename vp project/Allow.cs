@@ -31,13 +31,7 @@ namespace vp_project
             {
                 if (dvd_check.Checked == true)
                 {
-                    RegistryKey key = Registry.LocalMachine.OpenSubKey
-               ("SYSTEM\\CurrentControlSet\\Control\\StorageDevicePolicies", true);
-                    if (key != null)
-                    {
-                        key.SetValue("WriteProtect", 0, RegistryValueKind.DWord);
-                    }
-                    key.Close();
+                    Microsoft.Win32.Registry.SetValue(@"HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\cdrom", "Start", 3, Microsoft.Win32.RegistryValueKind.DWord);
                     MessageBox.Show("DVD access is allowed");
                 }
 
@@ -49,12 +43,21 @@ namespace vp_project
 
                 if (phone_check.Checked == true)
                 {
+                    RegistryKey key = Registry.LocalMachine.OpenSubKey
+              ("SYSTEM\\CurrentControlSet\\Control\\StorageDevicePolicies", true);
+                    if (key != null)
+                    {
+                        key.SetValue("WriteProtect", 0, RegistryValueKind.DWord);
+                    }
+                    key.Close();
+
                     MessageBox.Show("Mobile phone access is allowed");
                 }
 
                 if (floppy_check.Checked == true)
                 {
-                    MessageBox.Show("Floppy access is allowed");
+                   Microsoft.Win32.Registry.SetValue(@"HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\flpydisk", "Start", 3, Microsoft.Win32.RegistryValueKind.DWord);
+                   MessageBox.Show("Floppy access is allowed");
                 }
             }
 
