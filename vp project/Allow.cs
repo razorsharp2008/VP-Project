@@ -40,7 +40,7 @@ namespace vp_project
                     if (Allow_access.Checked == true)
                     {
                         Microsoft.Win32.Registry.SetValue(@"HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\USBSTOR", "Start", 3, Microsoft.Win32.RegistryValueKind.DWord);
-                        MessageBox.Show("USB access is allowed");
+                        MessageBox.Show("USB/Portable HDD access is allowed");
                     }
 
                     else if (Disable_write_protect.Checked == true)
@@ -52,7 +52,7 @@ namespace vp_project
                             key.SetValue("WriteProtect", 0, RegistryValueKind.DWord);
                         }
                         key.Close();
-                        MessageBox.Show("USB is no longer write protected");
+                        MessageBox.Show("USB/Portable HDD is no longer write protected");
                     }
                 }
 
@@ -187,8 +187,6 @@ namespace vp_project
         {
 
         }
-
-        
 
         private void Disable_write_protect_CheckedChanged(object sender, EventArgs e)
         {

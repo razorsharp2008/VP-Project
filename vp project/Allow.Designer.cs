@@ -164,9 +164,9 @@
             this.usb_check.AutoCheck = false;
             this.usb_check.Location = new System.Drawing.Point(11, 6);
             this.usb_check.Name = "usb_check";
-            this.usb_check.Size = new System.Drawing.Size(91, 17);
+            this.usb_check.Size = new System.Drawing.Size(145, 17);
             this.usb_check.TabIndex = 26;
-            this.usb_check.Text = "USB";
+            this.usb_check.Text = "USB/Portable HDD";
             this.usb_check.UseVisualStyleBackColor = true;
             this.usb_check.CheckedChanged += new System.EventHandler(this.usb_check_CheckedChanged);
             this.usb_check.Click += new System.EventHandler(this.usb_check_Click);

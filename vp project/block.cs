@@ -40,7 +40,7 @@ namespace vp_project
                     if (full_block_check.Checked == true)
                     {
                         Microsoft.Win32.Registry.SetValue(@"HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\USBSTOR", "Start", 4, Microsoft.Win32.RegistryValueKind.DWord);
-                        MessageBox.Show("USB access is fully blocked");
+                        MessageBox.Show("USB/Portable HDD access is fully blocked");
                     }
 
                     else if (write_protect_check.Checked == true)
@@ -61,7 +61,7 @@ namespace vp_project
                             key.SetValue("WriteProtect", 1, RegistryValueKind.DWord);
                         }
 
-                        MessageBox.Show("The USB is write protected");
+                        MessageBox.Show("The USB/Portable HDD is write protected");
                     }
                 }
 
