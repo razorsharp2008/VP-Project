@@ -44,10 +44,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.Allow_panel = new System.Windows.Forms.Panel();
+            this.allow_group = new System.Windows.Forms.GroupBox();
+            this.Disable_write_protect = new System.Windows.Forms.RadioButton();
+            this.Allow_access = new System.Windows.Forms.RadioButton();
             this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.Allow_panel.SuspendLayout();
+            this.allow_group.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -102,7 +106,7 @@
             // 
             // save_changes
             // 
-            this.save_changes.Location = new System.Drawing.Point(214, 336);
+            this.save_changes.Location = new System.Drawing.Point(215, 358);
             this.save_changes.Name = "save_changes";
             this.save_changes.Size = new System.Drawing.Size(137, 26);
             this.save_changes.TabIndex = 31;
@@ -135,7 +139,7 @@
             // floppy_check
             // 
             this.floppy_check.AutoCheck = false;
-            this.floppy_check.Location = new System.Drawing.Point(18, 147);
+            this.floppy_check.Location = new System.Drawing.Point(18, 191);
             this.floppy_check.Name = "floppy_check";
             this.floppy_check.Size = new System.Drawing.Size(91, 17);
             this.floppy_check.TabIndex = 28;
@@ -147,7 +151,7 @@
             // 
             this.phone_check.AutoCheck = false;
             this.phone_check.AutoSize = true;
-            this.phone_check.Location = new System.Drawing.Point(18, 112);
+            this.phone_check.Location = new System.Drawing.Point(18, 153);
             this.phone_check.Name = "phone_check";
             this.phone_check.Size = new System.Drawing.Size(91, 17);
             this.phone_check.TabIndex = 27;
@@ -158,7 +162,7 @@
             // usb_check
             // 
             this.usb_check.AutoCheck = false;
-            this.usb_check.Location = new System.Drawing.Point(18, 80);
+            this.usb_check.Location = new System.Drawing.Point(11, 6);
             this.usb_check.Name = "usb_check";
             this.usb_check.Size = new System.Drawing.Size(91, 17);
             this.usb_check.TabIndex = 26;
@@ -206,25 +210,63 @@
             this.pictureBox1.TabIndex = 22;
             this.pictureBox1.TabStop = false;
             // 
-            // panel1
+            // Allow_panel
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.floppy_check);
-            this.panel1.Controls.Add(this.phone_check);
-            this.panel1.Controls.Add(this.usb_check);
-            this.panel1.Controls.Add(this.dvd_check);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(196, 108);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(130, 182);
-            this.panel1.TabIndex = 33;
+            this.Allow_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Allow_panel.Controls.Add(this.allow_group);
+            this.Allow_panel.Controls.Add(this.floppy_check);
+            this.Allow_panel.Controls.Add(this.phone_check);
+            this.Allow_panel.Controls.Add(this.dvd_check);
+            this.Allow_panel.Controls.Add(this.label2);
+            this.Allow_panel.Location = new System.Drawing.Point(196, 108);
+            this.Allow_panel.Name = "Allow_panel";
+            this.Allow_panel.Size = new System.Drawing.Size(192, 222);
+            this.Allow_panel.TabIndex = 33;
+            // 
+            // allow_group
+            // 
+            this.allow_group.Controls.Add(this.Disable_write_protect);
+            this.allow_group.Controls.Add(this.Allow_access);
+            this.allow_group.Controls.Add(this.usb_check);
+            this.allow_group.Location = new System.Drawing.Point(7, 74);
+            this.allow_group.Name = "allow_group";
+            this.allow_group.Size = new System.Drawing.Size(180, 70);
+            this.allow_group.TabIndex = 31;
+            this.allow_group.TabStop = false;
+            // 
+            // Disable_write_protect
+            // 
+            this.Disable_write_protect.AutoSize = true;
+            this.Disable_write_protect.Location = new System.Drawing.Point(63, 43);
+            this.Disable_write_protect.Name = "Disable_write_protect";
+            this.Disable_write_protect.Size = new System.Drawing.Size(104, 17);
+            this.Disable_write_protect.TabIndex = 30;
+            this.Disable_write_protect.TabStop = true;
+            this.Disable_write_protect.Text = "No Write Protect";
+            this.Disable_write_protect.UseVisualStyleBackColor = true;
+            this.Disable_write_protect.Visible = false;
+            this.Disable_write_protect.CheckedChanged += new System.EventHandler(this.Disable_write_protect_CheckedChanged);
+            this.Disable_write_protect.Click += new System.EventHandler(this.Disable_write_protect_Click);
+            // 
+            // Allow_access
+            // 
+            this.Allow_access.AutoSize = true;
+            this.Allow_access.Location = new System.Drawing.Point(63, 20);
+            this.Allow_access.Name = "Allow_access";
+            this.Allow_access.Size = new System.Drawing.Size(79, 17);
+            this.Allow_access.TabIndex = 29;
+            this.Allow_access.TabStop = true;
+            this.Allow_access.Text = "Full Access";
+            this.Allow_access.UseVisualStyleBackColor = true;
+            this.Allow_access.Visible = false;
+            this.Allow_access.Click += new System.EventHandler(this.Allow_access_Click);
             // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.reset_checked);
             this.panel2.Controls.Add(this.all_checked);
-            this.panel2.Location = new System.Drawing.Point(12, 285);
+            this.panel2.Location = new System.Drawing.Point(8, 266);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(106, 64);
             this.panel2.TabIndex = 34;
@@ -236,7 +278,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(557, 396);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.Allow_panel);
             this.Controls.Add(this.start);
             this.Controls.Add(this.save_changes);
             this.Controls.Add(this.label3);
@@ -250,8 +292,10 @@
             this.Name = "Allow";
             this.Text = "Allow";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.Allow_panel.ResumeLayout(false);
+            this.Allow_panel.PerformLayout();
+            this.allow_group.ResumeLayout(false);
+            this.allow_group.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -275,7 +319,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel Allow_panel;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.GroupBox allow_group;
+        private System.Windows.Forms.RadioButton Disable_write_protect;
+        private System.Windows.Forms.RadioButton Allow_access;
     }
 }

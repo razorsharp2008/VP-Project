@@ -37,28 +37,37 @@ namespace vp_project
 
                 if (usb_check.Checked == true)
                 {
-                    Microsoft.Win32.Registry.SetValue(@"HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\USBSTOR", "Start", 4, Microsoft.Win32.RegistryValueKind.DWord);
-                   
-                    MessageBox.Show("USB access is blocked");
+                    if (full_block_check.Checked == true)
+                    {
+                        Microsoft.Win32.Registry.SetValue(@"HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\USBSTOR", "Start", 4, Microsoft.Win32.RegistryValueKind.DWord);
+                        MessageBox.Show("USB access is fully blocked");
+                    }
+
+                    else if (write_protect_check.Checked == true)
+                    {
+                        RegistryKey key = Registry.LocalMachine.OpenSubKey
+               ("SYSTEM\\CurrentControlSet\\Control\\StorageDevicePolicies", true);
+                        if (key == null)
+                        {
+                            Registry.LocalMachine.CreateSubKey
+                                ("SYSTEM\\CurrentControlSet\\Control\\StorageDevicePolicies", RegistryKeyPermissionCheck.ReadWriteSubTree);
+                            key = Registry.LocalMachine.OpenSubKey
+                            ("SYSTEM\\CurrentControlSet\\Control\\StorageDevicePolicies", true);
+                            key.SetValue("WriteProtect", 1, RegistryValueKind.DWord);
+                        }
+
+                        else if (key.GetValue("WriteProtect") != (object)(1))
+                        {
+                            key.SetValue("WriteProtect", 1, RegistryValueKind.DWord);
+                        }
+
+                        MessageBox.Show("The USB is write protected");
+                    }
                 }
 
                 if (phone_check.Checked == true)
                 {
-                    RegistryKey key = Registry.LocalMachine.OpenSubKey
-               ("SYSTEM\\CurrentControlSet\\Control\\StorageDevicePolicies", true);
-                    if (key == null)
-                    {
-                        Registry.LocalMachine.CreateSubKey
-                            ("SYSTEM\\CurrentControlSet\\Control\\StorageDevicePolicies", RegistryKeyPermissionCheck.ReadWriteSubTree);
-                        key = Registry.LocalMachine.OpenSubKey
-                        ("SYSTEM\\CurrentControlSet\\Control\\StorageDevicePolicies", true);
-                        key.SetValue("WriteProtect", 1, RegistryValueKind.DWord);
-                    }
-
-                    else if (key.GetValue("WriteProtect") != (object)(1))
-                    {
-                        key.SetValue("WriteProtect", 1, RegistryValueKind.DWord);
-                    }
+                    
 
                     MessageBox.Show("Mobile phone access is blocked");
                 }
@@ -84,6 +93,13 @@ namespace vp_project
                 dvd_check.Checked = true;
                 phone_check.Checked = true;
                 usb_check.Checked = true;
+                if (usb_check.Checked == true)
+                {
+                    full_block_check.Visible = true;
+                    full_block_check.Checked = false;
+                    write_protect_check.Visible = true;
+                    write_protect_check.Checked = false;
+                }
             }
 
             else if (all_checked.Checked == true)
@@ -115,6 +131,13 @@ namespace vp_project
                     dvd_check.Checked = false;
                     phone_check.Checked = false;
                     usb_check.Checked = false;
+                    if (usb_check.Checked == false)
+                    {
+                        full_block_check.Visible = false;
+                        full_block_check.Checked = false;
+                        write_protect_check.Checked = false;
+                        write_protect_check.Visible = false;
+                    }
                 }
 
                 else if (reset_checked.Checked == true)
@@ -154,12 +177,46 @@ namespace vp_project
                 if (usb_check.Checked == false)
                 {
                     usb_check.Checked = true;
+                    full_block_check.Visible = true;
+                    full_block_check.Checked = false;
+                    write_protect_check.Visible = true;
+                    write_protect_check.Checked = false;
                 }
 
                 else if (usb_check.Checked == true)
                 {
                     usb_check.Checked = false;
+                    full_block_check.Visible = false;
+                    full_block_check.Checked = false;
+                    write_protect_check.Checked = false;
+                    write_protect_check.Visible = false;
                 }
+            }
+
+            private void full_block_check_Click(object sender, EventArgs e)
+            {
+                if (full_block_check.Checked == false)
+                {
+                    full_block_check.Checked = true;
+                }
+            }
+
+            private void write_protect_check_Click(object sender, EventArgs e)
+            {
+                if (write_protect_check.Checked == false)
+                {
+                    write_protect_check.Checked = true;
+                }
+            }
+
+            private void write_protect_check_CheckedChanged(object sender, EventArgs e)
+            {
+
+            }
+
+            private void usb_group_Enter(object sender, EventArgs e)
+            {
+
             }  
     }
 }

@@ -26,9 +26,9 @@ namespace vp_project
         {
             
             string login = "admin", password = "admin";
-            if (textBox1.Text == login)
+            if (loginID_text.Text == login)
             {
-                if (textBox2.Text == password)
+                if (password_text.Text == password)
                 {
                     Main_menu obj = new Main_menu();
                     obj.Show();
@@ -47,5 +47,12 @@ namespace vp_project
         {
            
         }
+
+        private void Login_ID_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }

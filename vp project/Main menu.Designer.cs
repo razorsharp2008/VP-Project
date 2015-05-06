@@ -99,7 +99,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Main_menu";
-            this.Text = "Main_menu";
+            this.Text = "Main Menu";
             this.Load += new System.EventHandler(this.Main_menu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

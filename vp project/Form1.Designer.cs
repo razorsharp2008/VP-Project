@@ -29,31 +29,31 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.start_picture = new System.Windows.Forms.PictureBox();
+            this.access_control_label = new System.Windows.Forms.Label();
             this.start = new System.Windows.Forms.Button();
             this.end = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.start_picture)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox3
+            // start_picture
             // 
-            this.pictureBox3.Image = global::vp_project.Properties.Resources.pictah;
-            this.pictureBox3.Location = new System.Drawing.Point(-1, -2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(697, 511);
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
+            this.start_picture.Image = global::vp_project.Properties.Resources.pictah;
+            this.start_picture.Location = new System.Drawing.Point(-3, -1);
+            this.start_picture.Name = "start_picture";
+            this.start_picture.Size = new System.Drawing.Size(697, 511);
+            this.start_picture.TabIndex = 2;
+            this.start_picture.TabStop = false;
             // 
-            // label1
+            // access_control_label
             // 
-            this.label1.Font = new System.Drawing.Font("Mistral", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(265, 215);
-            this.label1.MaximumSize = new System.Drawing.Size(500, 200);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(249, 88);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "ACCESS CONTROL      MECHANISM";
+            this.access_control_label.Font = new System.Drawing.Font("Mistral", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.access_control_label.Location = new System.Drawing.Point(265, 215);
+            this.access_control_label.MaximumSize = new System.Drawing.Size(500, 200);
+            this.access_control_label.Name = "access_control_label";
+            this.access_control_label.Size = new System.Drawing.Size(249, 88);
+            this.access_control_label.TabIndex = 3;
+            this.access_control_label.Text = "ACCESS CONTROL      MECHANISM";
             // 
             // start
             // 
@@ -83,22 +83,22 @@
             this.ClientSize = new System.Drawing.Size(688, 506);
             this.Controls.Add(this.end);
             this.Controls.Add(this.start);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.access_control_label);
+            this.Controls.Add(this.start_picture);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Start Menu";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.start_picture)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox start_picture;
+        private System.Windows.Forms.Label access_control_label;
         private System.Windows.Forms.Button start;
         private System.Windows.Forms.Button end;
     }

@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(login));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.loginID_text = new System.Windows.Forms.TextBox();
+            this.password_text = new System.Windows.Forms.TextBox();
+            this.Login_ID = new System.Windows.Forms.Label();
+            this.password = new System.Windows.Forms.Label();
             this.log = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -49,42 +49,43 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // textBox1
+            // loginID_text
             // 
-            this.textBox1.AcceptsReturn = true;
-            this.textBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox1.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.textBox1.Location = new System.Drawing.Point(77, 7);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(128, 20);
-            this.textBox1.TabIndex = 1;
+            this.loginID_text.AcceptsReturn = true;
+            this.loginID_text.BackColor = System.Drawing.SystemColors.Window;
+            this.loginID_text.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.loginID_text.Location = new System.Drawing.Point(77, 7);
+            this.loginID_text.Name = "loginID_text";
+            this.loginID_text.Size = new System.Drawing.Size(128, 20);
+            this.loginID_text.TabIndex = 1;
             // 
-            // textBox2
+            // password_text
             // 
-            this.textBox2.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.textBox2.Location = new System.Drawing.Point(78, 38);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(127, 20);
-            this.textBox2.TabIndex = 2;
+            this.password_text.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.password_text.Location = new System.Drawing.Point(78, 38);
+            this.password_text.Name = "password_text";
+            this.password_text.PasswordChar = '*';
+            this.password_text.Size = new System.Drawing.Size(127, 20);
+            this.password_text.TabIndex = 2;
             // 
-            // label1
+            // Login_ID
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Login ID";
+            this.Login_ID.AutoSize = true;
+            this.Login_ID.Location = new System.Drawing.Point(7, 10);
+            this.Login_ID.Name = "Login_ID";
+            this.Login_ID.Size = new System.Drawing.Size(47, 13);
+            this.Login_ID.TabIndex = 3;
+            this.Login_ID.Text = "Login ID";
+            this.Login_ID.Click += new System.EventHandler(this.Login_ID_Click);
             // 
-            // label2
+            // password
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 38);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Password";
+            this.password.AutoSize = true;
+            this.password.Location = new System.Drawing.Point(7, 38);
+            this.password.Name = "password";
+            this.password.Size = new System.Drawing.Size(53, 13);
+            this.password.TabIndex = 4;
+            this.password.Text = "Password";
             // 
             // log
             // 
@@ -99,10 +100,10 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.password);
+            this.panel1.Controls.Add(this.Login_ID);
+            this.panel1.Controls.Add(this.password_text);
+            this.panel1.Controls.Add(this.loginID_text);
             this.panel1.Location = new System.Drawing.Point(122, 78);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(215, 70);
@@ -121,7 +122,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "login";
-            this.Text = "login";
+            this.Text = "Login";
             this.Load += new System.EventHandler(this.login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -133,10 +134,10 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox loginID_text;
+        private System.Windows.Forms.TextBox password_text;
+        private System.Windows.Forms.Label Login_ID;
+        private System.Windows.Forms.Label password;
         private System.Windows.Forms.Button log;
         private System.Windows.Forms.Panel panel1;
     }

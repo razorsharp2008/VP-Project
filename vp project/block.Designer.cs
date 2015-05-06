@@ -30,10 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(block));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.Block_device_menu = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dvd_check = new System.Windows.Forms.CheckBox();
-            this.usb_check = new System.Windows.Forms.CheckBox();
             this.phone_check = new System.Windows.Forms.CheckBox();
             this.floppy_check = new System.Windows.Forms.CheckBox();
             this.all_checked = new System.Windows.Forms.CheckBox();
@@ -41,9 +40,14 @@
             this.save_changes = new System.Windows.Forms.Button();
             this.start = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.usb_group = new System.Windows.Forms.GroupBox();
+            this.write_protect_check = new System.Windows.Forms.RadioButton();
+            this.full_block_check = new System.Windows.Forms.RadioButton();
+            this.usb_check = new System.Windows.Forms.CheckBox();
             this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
+            this.usb_group.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,15 +60,15 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // label1
+            // Block_device_menu
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(135, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(275, 45);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "BLOCK DEVICES";
+            this.Block_device_menu.AutoSize = true;
+            this.Block_device_menu.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Block_device_menu.Location = new System.Drawing.Point(135, 23);
+            this.Block_device_menu.Name = "Block_device_menu";
+            this.Block_device_menu.Size = new System.Drawing.Size(275, 45);
+            this.Block_device_menu.TabIndex = 1;
+            this.Block_device_menu.Text = "BLOCK DEVICES";
             // 
             // label2
             // 
@@ -86,22 +90,11 @@
             this.dvd_check.UseVisualStyleBackColor = true;
             this.dvd_check.Click += new System.EventHandler(this.dvd_check_Click);
             // 
-            // usb_check
-            // 
-            this.usb_check.AutoCheck = false;
-            this.usb_check.Location = new System.Drawing.Point(20, 83);
-            this.usb_check.Name = "usb_check";
-            this.usb_check.Size = new System.Drawing.Size(91, 17);
-            this.usb_check.TabIndex = 4;
-            this.usb_check.Text = "USB";
-            this.usb_check.UseVisualStyleBackColor = true;
-            this.usb_check.Click += new System.EventHandler(this.usb_check_Click);
-            // 
             // phone_check
             // 
             this.phone_check.AutoCheck = false;
             this.phone_check.AutoSize = true;
-            this.phone_check.Location = new System.Drawing.Point(20, 115);
+            this.phone_check.Location = new System.Drawing.Point(19, 153);
             this.phone_check.Name = "phone_check";
             this.phone_check.Size = new System.Drawing.Size(91, 17);
             this.phone_check.TabIndex = 5;
@@ -112,7 +105,7 @@
             // floppy_check
             // 
             this.floppy_check.AutoCheck = false;
-            this.floppy_check.Location = new System.Drawing.Point(20, 148);
+            this.floppy_check.Location = new System.Drawing.Point(19, 185);
             this.floppy_check.Name = "floppy_check";
             this.floppy_check.Size = new System.Drawing.Size(91, 17);
             this.floppy_check.TabIndex = 6;
@@ -144,7 +137,7 @@
             // 
             // save_changes
             // 
-            this.save_changes.Location = new System.Drawing.Point(218, 336);
+            this.save_changes.Location = new System.Drawing.Point(219, 353);
             this.save_changes.Name = "save_changes";
             this.save_changes.Size = new System.Drawing.Size(102, 30);
             this.save_changes.TabIndex = 9;
@@ -166,22 +159,72 @@
             // 
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.usb_group);
             this.panel1.Controls.Add(this.floppy_check);
             this.panel1.Controls.Add(this.phone_check);
-            this.panel1.Controls.Add(this.usb_check);
             this.panel1.Controls.Add(this.dvd_check);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(198, 105);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(138, 174);
+            this.panel1.Size = new System.Drawing.Size(187, 223);
             this.panel1.TabIndex = 11;
+            // 
+            // usb_group
+            // 
+            this.usb_group.Controls.Add(this.write_protect_check);
+            this.usb_group.Controls.Add(this.full_block_check);
+            this.usb_group.Controls.Add(this.usb_check);
+            this.usb_group.Location = new System.Drawing.Point(13, 77);
+            this.usb_group.Name = "usb_group";
+            this.usb_group.Size = new System.Drawing.Size(168, 65);
+            this.usb_group.TabIndex = 9;
+            this.usb_group.TabStop = false;
+            this.usb_group.Enter += new System.EventHandler(this.usb_group_Enter);
+            // 
+            // write_protect_check
+            // 
+            this.write_protect_check.AutoSize = true;
+            this.write_protect_check.Location = new System.Drawing.Point(66, 39);
+            this.write_protect_check.Name = "write_protect_check";
+            this.write_protect_check.Size = new System.Drawing.Size(86, 17);
+            this.write_protect_check.TabIndex = 8;
+            this.write_protect_check.TabStop = true;
+            this.write_protect_check.Text = "Write protect";
+            this.write_protect_check.UseVisualStyleBackColor = true;
+            this.write_protect_check.Visible = false;
+            this.write_protect_check.CheckedChanged += new System.EventHandler(this.write_protect_check_CheckedChanged);
+            this.write_protect_check.Click += new System.EventHandler(this.write_protect_check_Click);
+            // 
+            // full_block_check
+            // 
+            this.full_block_check.AutoSize = true;
+            this.full_block_check.Location = new System.Drawing.Point(66, 16);
+            this.full_block_check.Name = "full_block_check";
+            this.full_block_check.Size = new System.Drawing.Size(70, 17);
+            this.full_block_check.TabIndex = 7;
+            this.full_block_check.TabStop = true;
+            this.full_block_check.Text = "Full block";
+            this.full_block_check.UseVisualStyleBackColor = true;
+            this.full_block_check.Visible = false;
+            this.full_block_check.Click += new System.EventHandler(this.full_block_check_Click);
+            // 
+            // usb_check
+            // 
+            this.usb_check.AutoCheck = false;
+            this.usb_check.Location = new System.Drawing.Point(6, 0);
+            this.usb_check.Name = "usb_check";
+            this.usb_check.Size = new System.Drawing.Size(91, 17);
+            this.usb_check.TabIndex = 4;
+            this.usb_check.Text = "USB";
+            this.usb_check.UseVisualStyleBackColor = true;
+            this.usb_check.Click += new System.EventHandler(this.usb_check_Click);
             // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.reset_checked);
             this.panel2.Controls.Add(this.all_checked);
-            this.panel2.Location = new System.Drawing.Point(21, 284);
+            this.panel2.Location = new System.Drawing.Point(19, 265);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(103, 63);
             this.panel2.TabIndex = 12;
@@ -197,15 +240,17 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.start);
             this.Controls.Add(this.save_changes);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.Block_device_menu);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "block";
-            this.Text = "block";
+            this.Text = "Block";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.usb_group.ResumeLayout(false);
+            this.usb_group.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -215,10 +260,9 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label Block_device_menu;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox dvd_check;
-        private System.Windows.Forms.CheckBox usb_check;
         private System.Windows.Forms.CheckBox phone_check;
         private System.Windows.Forms.CheckBox floppy_check;
         private System.Windows.Forms.CheckBox all_checked;
@@ -227,5 +271,9 @@
         private System.Windows.Forms.Button start;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.RadioButton write_protect_check;
+        private System.Windows.Forms.RadioButton full_block_check;
+        private System.Windows.Forms.CheckBox usb_check;
+        private System.Windows.Forms.GroupBox usb_group;
     }
 }

@@ -37,20 +37,28 @@ namespace vp_project
 
                 if (usb_check.Checked == true)
                 {
-                    Microsoft.Win32.Registry.SetValue(@"HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\USBSTOR", "Start", 3, Microsoft.Win32.RegistryValueKind.DWord);
-                    MessageBox.Show("USB access is allowed");
+                    if (Allow_access.Checked == true)
+                    {
+                        Microsoft.Win32.Registry.SetValue(@"HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\USBSTOR", "Start", 3, Microsoft.Win32.RegistryValueKind.DWord);
+                        MessageBox.Show("USB access is allowed");
+                    }
+
+                    else if (Disable_write_protect.Checked == true)
+                    {
+                        RegistryKey key = Registry.LocalMachine.OpenSubKey
+                        ("SYSTEM\\CurrentControlSet\\Control\\StorageDevicePolicies", true);
+                        if (key != null)
+                        {
+                            key.SetValue("WriteProtect", 0, RegistryValueKind.DWord);
+                        }
+                        key.Close();
+                        MessageBox.Show("USB is no longer write protected");
+                    }
                 }
+
 
                 if (phone_check.Checked == true)
                 {
-                    RegistryKey key = Registry.LocalMachine.OpenSubKey
-              ("SYSTEM\\CurrentControlSet\\Control\\StorageDevicePolicies", true);
-                    if (key != null)
-                    {
-                        key.SetValue("WriteProtect", 0, RegistryValueKind.DWord);
-                    }
-                    key.Close();
-
                     MessageBox.Show("Mobile phone access is allowed");
                 }
 
@@ -75,6 +83,13 @@ namespace vp_project
                 dvd_check.Checked = true;
                 phone_check.Checked = true;
                 usb_check.Checked = true;
+                if (usb_check.Checked == true)
+                {
+                    Allow_access.Visible = true;
+                    Allow_access.Checked = false;
+                    Disable_write_protect.Visible = true;
+                    Disable_write_protect.Checked = false;
+                }
             }
 
             else if (all_checked.Checked == true)
@@ -114,15 +129,21 @@ namespace vp_project
             if (usb_check.Checked == false)
             {
                 usb_check.Checked = true;
+                Allow_access.Visible = true;
+                Allow_access.Checked = false;
+                Disable_write_protect.Visible = true;
+                Disable_write_protect.Checked = false;
             }
 
             else if (usb_check.Checked == true)
             {
                 usb_check.Checked = false;
+                Allow_access.Visible = false;
+                Allow_access.Checked = false;
+                Disable_write_protect.Visible = false;
+                Disable_write_protect.Checked = false;
             }
         }
-
-        
 
         private void reset_checked_Click(object sender, EventArgs e)
         {
@@ -134,6 +155,13 @@ namespace vp_project
                 dvd_check.Checked = false;
                 phone_check.Checked = false;
                 usb_check.Checked = false;
+                if (usb_check.Checked == false)
+                {
+                    Allow_access.Visible = false;
+                    Allow_access.Checked = false;
+                    Disable_write_protect.Visible = false;
+                    Disable_write_protect.Checked = false;
+                }
             }
 
             else if (reset_checked.Checked == true)
@@ -158,6 +186,29 @@ namespace vp_project
         private void usb_check_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        
+
+        private void Disable_write_protect_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Allow_access_Click(object sender, EventArgs e)
+        {
+            if(Allow_access.Checked == false)
+            {
+                Allow_access.Checked = true;
+            }
+        }
+
+        private void Disable_write_protect_Click(object sender, EventArgs e)
+        {
+            if(Disable_write_protect.Checked == false)
+            {
+                Disable_write_protect.Checked = true;
+            }
         }
 
         
