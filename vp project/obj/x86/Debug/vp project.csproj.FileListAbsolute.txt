@@ -11,3 +11,6 @@ C:\Users\Abdul Ahad\Desktop\VP\vp project\vp project\bin\Debug\vp project.exe
 C:\Users\Abdul Ahad\Desktop\VP\vp project\vp project\bin\Debug\vp project.pdb
 C:\Users\Abdul Ahad\Desktop\VP\vp project\vp project\obj\x86\Debug\vp project.exe
 C:\Users\Abdul Ahad\Desktop\VP\vp project\vp project\obj\x86\Debug\vp project.pdb
+C:\Users\Abdul Ahad\Desktop\VP\vp project\vp project\obj\x86\Debug\vp_project.Choice.resources
+C:\Users\Abdul Ahad\Desktop\VP\vp project\vp project\obj\x86\Debug\vp_project.Remote.resources
+C:\Users\Abdul Ahad\Desktop\VP\vp project\vp project\obj\x86\Debug\vp_project.UIremote.resources

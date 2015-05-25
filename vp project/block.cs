@@ -217,6 +217,11 @@ namespace vp_project
             private void usb_group_Enter(object sender, EventArgs e)
             {
 
+            }
+
+            private void block_Load(object sender, EventArgs e)
+            {
+
             }  
     }
 }

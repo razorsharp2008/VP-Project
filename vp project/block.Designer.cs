@@ -246,6 +246,7 @@
             this.MaximizeBox = false;
             this.Name = "block";
             this.Text = "Block";
+            this.Load += new System.EventHandler(this.block_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

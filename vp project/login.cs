@@ -30,7 +30,7 @@ namespace vp_project
             {
                 if (password_text.Text == password)
                 {
-                    Main_menu obj = new Main_menu();
+                    Choice obj = new Choice();
                     obj.Show();
                     Hide();
                 }
