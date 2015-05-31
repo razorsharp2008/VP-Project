@@ -67,8 +67,6 @@ namespace vp_project
 
                 if (phone_check.Checked == true)
                 {
-                    
-
                     MessageBox.Show("Mobile phone access is blocked");
                 }
 

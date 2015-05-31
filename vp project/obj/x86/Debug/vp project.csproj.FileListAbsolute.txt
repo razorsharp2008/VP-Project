@@ -14,3 +14,18 @@ C:\Users\Abdul Ahad\Desktop\VP\vp project\vp project\obj\x86\Debug\vp project.pd
 C:\Users\Abdul Ahad\Desktop\VP\vp project\vp project\obj\x86\Debug\vp_project.Choice.resources
 C:\Users\Abdul Ahad\Desktop\VP\vp project\vp project\obj\x86\Debug\vp_project.Remote.resources
 C:\Users\Abdul Ahad\Desktop\VP\vp project\vp project\obj\x86\Debug\vp_project.UIremote.resources
+E:\test server client\vp project\obj\x86\Debug\vp project.exe
+E:\test server client\vp project\obj\x86\Debug\vp project.pdb
+E:\test server client\vp project\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\test server client\vp project\obj\x86\Debug\vp_project.Allow.resources
+E:\test server client\vp project\obj\x86\Debug\vp_project.block.resources
+E:\test server client\vp project\obj\x86\Debug\vp_project.Choice.resources
+E:\test server client\vp project\obj\x86\Debug\vp_project.Form1.resources
+E:\test server client\vp project\obj\x86\Debug\vp_project.login.resources
+E:\test server client\vp project\obj\x86\Debug\vp_project.Main_menu.resources
+E:\test server client\vp project\obj\x86\Debug\vp_project.Properties.Resources.resources
+E:\test server client\vp project\obj\x86\Debug\vp_project.Remote.resources
+E:\test server client\vp project\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\test server client\vp project\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\test server client\vp project\bin\Debug\vp project.exe
+E:\test server client\vp project\bin\Debug\vp project.pdb

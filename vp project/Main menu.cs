@@ -21,26 +21,26 @@ namespace vp_project
         {
             block obj = new block();
             obj.Show();
-            Hide();
+            this.Close();
         }
 
         private void allow_Click(object sender, EventArgs e)
         {
             Allow obj1 = new Allow();
             obj1.Show();
-            Hide();
+            this.Close();
         }
 
         private void end_Click(object sender, EventArgs e)
         {
-            Environment.Exit(1);
+            Choice obj2 = new Choice();
+            obj2.Show();
+            this.Close();
         }
 
         private void Main_menu_Load(object sender, EventArgs e)
         {
 
         }
-
-
     }
 }

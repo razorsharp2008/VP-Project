@@ -82,7 +82,7 @@
             this.end.Name = "end";
             this.end.Size = new System.Drawing.Size(102, 41);
             this.end.TabIndex = 4;
-            this.end.Text = "Exit";
+            this.end.Text = "Back";
             this.end.UseVisualStyleBackColor = true;
             this.end.Click += new System.EventHandler(this.end_Click);
             // 

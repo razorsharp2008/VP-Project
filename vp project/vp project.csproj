@@ -90,12 +90,6 @@
     <Compile Include="Remote.Designer.cs">
       <DependentUpon>Remote.cs</DependentUpon>
     </Compile>
-    <Compile Include="UIremote.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UIremote.Designer.cs">
-      <DependentUpon>UIremote.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Allow.resx">
       <DependentUpon>Allow.cs</DependentUpon>
     </EmbeddedResource>
@@ -126,9 +120,6 @@
     </Compile>
     <EmbeddedResource Include="Remote.resx">
       <DependentUpon>Remote.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UIremote.resx">
-      <DependentUpon>UIremote.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
