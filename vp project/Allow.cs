@@ -161,16 +161,6 @@ namespace vp_project
             }
         }
 
-        private void usb_check_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Disable_write_protect_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void Allow_access_Click(object sender, EventArgs e)
         {
             if(Allow_access.Checked == false)
@@ -186,7 +176,5 @@ namespace vp_project
                 Disable_write_protect.Checked = true;
             }
         }
-
-        
     }
 }

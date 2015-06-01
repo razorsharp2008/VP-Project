@@ -165,7 +165,6 @@
             this.usb_group.Size = new System.Drawing.Size(168, 65);
             this.usb_group.TabIndex = 9;
             this.usb_group.TabStop = false;
-            this.usb_group.Enter += new System.EventHandler(this.usb_group_Enter);
             // 
             // write_protect_check
             // 
@@ -178,7 +177,6 @@
             this.write_protect_check.Text = "Write protect";
             this.write_protect_check.UseVisualStyleBackColor = true;
             this.write_protect_check.Visible = false;
-            this.write_protect_check.CheckedChanged += new System.EventHandler(this.write_protect_check_CheckedChanged);
             this.write_protect_check.Click += new System.EventHandler(this.write_protect_check_Click);
             // 
             // full_block_check
@@ -232,7 +230,6 @@
             this.MaximizeBox = false;
             this.Name = "block";
             this.Text = "Block";
-            this.Load += new System.EventHandler(this.block_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

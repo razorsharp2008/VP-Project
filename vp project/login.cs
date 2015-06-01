@@ -16,12 +16,6 @@ namespace vp_project
             InitializeComponent();
         }
 
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         public void log_Click(object sender, EventArgs e)
         {
             
@@ -36,23 +30,19 @@ namespace vp_project
                 }
 
                 else
+                {
                     MessageBox.Show("Incorrect password");
+                    loginID_text.Text = "";
+                    password_text.Text = "";
+                }
             }
 
             else
+            {
                 MessageBox.Show("Incorrect user name or password");
+                loginID_text.Text = "";
+                password_text.Text = "";
+            }
         }
-
-        private void login_Load(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void Login_ID_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        
     }
 }
