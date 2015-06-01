@@ -26,8 +26,7 @@ namespace vp_project
 
         private void save_changes_Click(object sender, EventArgs e)
         {
-            if ((dvd_check.Checked == true) || (usb_check.Checked == true) || (floppy_check.Checked == true) ||
-                (phone_check.Checked == true))
+            if ((dvd_check.Checked == true) || (usb_check.Checked == true) || (floppy_check.Checked == true))
             {
                 if (dvd_check.Checked == true)
                 {
@@ -56,12 +55,6 @@ namespace vp_project
                     }
                 }
 
-
-                if (phone_check.Checked == true)
-                {
-                    MessageBox.Show("Mobile phone access is allowed");
-                }
-
                 if (floppy_check.Checked == true)
                 {
                    Microsoft.Win32.Registry.SetValue(@"HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\flpydisk", "Start", 3, Microsoft.Win32.RegistryValueKind.DWord);
@@ -81,7 +74,6 @@ namespace vp_project
                 all_checked.Checked = true;
                 floppy_check.Checked = true;
                 dvd_check.Checked = true;
-                phone_check.Checked = true;
                 usb_check.Checked = true;
                 if (usb_check.Checked == true)
                 {
@@ -108,19 +100,6 @@ namespace vp_project
             else if (floppy_check.Checked == true)
             {
                 floppy_check.Checked = false;
-            }
-        }
-
-        private void phone_check_Click(object sender, EventArgs e)
-        {
-            if (phone_check.Checked == false)
-            {
-                phone_check.Checked = true;
-            }
-
-            else if (phone_check.Checked == true)
-            {
-                phone_check.Checked = false;
             }
         }
 
@@ -153,7 +132,6 @@ namespace vp_project
                 reset_checked.Checked = true;
                 floppy_check.Checked = false;
                 dvd_check.Checked = false;
-                phone_check.Checked = false;
                 usb_check.Checked = false;
                 if (usb_check.Checked == false)
                 {

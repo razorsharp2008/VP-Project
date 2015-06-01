@@ -33,7 +33,6 @@
             this.Block_device_menu = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dvd_check = new System.Windows.Forms.CheckBox();
-            this.phone_check = new System.Windows.Forms.CheckBox();
             this.floppy_check = new System.Windows.Forms.CheckBox();
             this.all_checked = new System.Windows.Forms.CheckBox();
             this.reset_checked = new System.Windows.Forms.CheckBox();
@@ -90,22 +89,10 @@
             this.dvd_check.UseVisualStyleBackColor = true;
             this.dvd_check.Click += new System.EventHandler(this.dvd_check_Click);
             // 
-            // phone_check
-            // 
-            this.phone_check.AutoCheck = false;
-            this.phone_check.AutoSize = true;
-            this.phone_check.Location = new System.Drawing.Point(19, 153);
-            this.phone_check.Name = "phone_check";
-            this.phone_check.Size = new System.Drawing.Size(91, 17);
-            this.phone_check.TabIndex = 5;
-            this.phone_check.Text = "Mobile Phone";
-            this.phone_check.UseVisualStyleBackColor = true;
-            this.phone_check.Click += new System.EventHandler(this.phone_check_Click);
-            // 
             // floppy_check
             // 
             this.floppy_check.AutoCheck = false;
-            this.floppy_check.Location = new System.Drawing.Point(19, 185);
+            this.floppy_check.Location = new System.Drawing.Point(20, 89);
             this.floppy_check.Name = "floppy_check";
             this.floppy_check.Size = new System.Drawing.Size(91, 17);
             this.floppy_check.TabIndex = 6;
@@ -161,7 +148,6 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.usb_group);
             this.panel1.Controls.Add(this.floppy_check);
-            this.panel1.Controls.Add(this.phone_check);
             this.panel1.Controls.Add(this.dvd_check);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(198, 105);
@@ -174,7 +160,7 @@
             this.usb_group.Controls.Add(this.write_protect_check);
             this.usb_group.Controls.Add(this.full_block_check);
             this.usb_group.Controls.Add(this.usb_check);
-            this.usb_group.Location = new System.Drawing.Point(13, 77);
+            this.usb_group.Location = new System.Drawing.Point(14, 130);
             this.usb_group.Name = "usb_group";
             this.usb_group.Size = new System.Drawing.Size(168, 65);
             this.usb_group.TabIndex = 9;
@@ -264,7 +250,6 @@
         private System.Windows.Forms.Label Block_device_menu;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox dvd_check;
-        private System.Windows.Forms.CheckBox phone_check;
         private System.Windows.Forms.CheckBox floppy_check;
         private System.Windows.Forms.CheckBox all_checked;
         private System.Windows.Forms.CheckBox reset_checked;

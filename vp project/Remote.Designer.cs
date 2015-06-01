@@ -41,6 +41,7 @@
             this.block_container = new System.Windows.Forms.GroupBox();
             this.allow_container = new System.Windows.Forms.GroupBox();
             this.disconnect = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.block_container.SuspendLayout();
             this.allow_container.SuspendLayout();
             this.SuspendLayout();
@@ -146,7 +147,7 @@
             this.block_container.Controls.Add(this.rem_block_floppy);
             this.block_container.Controls.Add(this.rem_block_dvd);
             this.block_container.Controls.Add(this.rem_block_usb);
-            this.block_container.Location = new System.Drawing.Point(77, 68);
+            this.block_container.Location = new System.Drawing.Point(76, 99);
             this.block_container.Name = "block_container";
             this.block_container.Size = new System.Drawing.Size(139, 254);
             this.block_container.TabIndex = 25;
@@ -159,7 +160,7 @@
             this.allow_container.Controls.Add(this.rem_allow_floppy);
             this.allow_container.Controls.Add(this.rem_allow_dvd);
             this.allow_container.Controls.Add(this.rem_allow_usb);
-            this.allow_container.Location = new System.Drawing.Point(437, 68);
+            this.allow_container.Location = new System.Drawing.Point(437, 99);
             this.allow_container.Name = "allow_container";
             this.allow_container.Size = new System.Drawing.Size(147, 254);
             this.allow_container.TabIndex = 26;
@@ -178,11 +179,22 @@
             this.disconnect.Visible = false;
             this.disconnect.Click += new System.EventHandler(this.disconnect_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(85, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(479, 42);
+            this.label1.TabIndex = 28;
+            this.label1.Text = "Remote Control Mechanism";
+            // 
             // Remote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(614, 458);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.disconnect);
             this.Controls.Add(this.allow_container);
             this.Controls.Add(this.block_container);
@@ -215,5 +227,6 @@
         private System.Windows.Forms.GroupBox block_container;
         private System.Windows.Forms.GroupBox allow_container;
         private System.Windows.Forms.Button disconnect;
+        private System.Windows.Forms.Label label1;
     }
 }
