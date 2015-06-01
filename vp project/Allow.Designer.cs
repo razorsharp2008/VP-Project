@@ -155,7 +155,6 @@
             this.usb_check.TabIndex = 26;
             this.usb_check.Text = "USB/Portable HDD";
             this.usb_check.UseVisualStyleBackColor = true;
-            this.usb_check.CheckedChanged += new System.EventHandler(this.usb_check_CheckedChanged);
             this.usb_check.Click += new System.EventHandler(this.usb_check_Click);
             // 
             // dvd_check
@@ -231,7 +230,6 @@
             this.Disable_write_protect.Text = "No Write Protect";
             this.Disable_write_protect.UseVisualStyleBackColor = true;
             this.Disable_write_protect.Visible = false;
-            this.Disable_write_protect.CheckedChanged += new System.EventHandler(this.Disable_write_protect_CheckedChanged);
             this.Disable_write_protect.Click += new System.EventHandler(this.Disable_write_protect_Click);
             // 
             // Allow_access

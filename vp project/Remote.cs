@@ -23,14 +23,9 @@ namespace vp_project
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void Remote_Load(object sender, EventArgs e)
         {
-            textRemoteIp.Text = "192.168.1.2";
+            textRemoteIp.Text = GetLocalIP();
         }
 
         private string GetLocalIP()
@@ -42,10 +37,9 @@ namespace vp_project
                 if (ip.AddressFamily == AddressFamily.InterNetwork)
                     return ip.ToString();
             }
+
             return "127.0.0.1";
         }
-
-       
 
         private void previous_Click(object sender, EventArgs e)
         {

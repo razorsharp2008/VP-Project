@@ -185,20 +185,5 @@ namespace vp_project
                     write_protect_check.Checked = true;
                 }
             }
-
-            private void write_protect_check_CheckedChanged(object sender, EventArgs e)
-            {
-
-            }
-
-            private void usb_group_Enter(object sender, EventArgs e)
-            {
-
-            }
-
-            private void block_Load(object sender, EventArgs e)
-            {
-
-            }  
     }
 }

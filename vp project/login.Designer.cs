@@ -76,7 +76,6 @@
             this.Login_ID.Size = new System.Drawing.Size(47, 13);
             this.Login_ID.TabIndex = 3;
             this.Login_ID.Text = "Login ID";
-            this.Login_ID.Click += new System.EventHandler(this.Login_ID_Click);
             // 
             // password
             // 
@@ -108,7 +107,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(215, 70);
             this.panel1.TabIndex = 6;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // login
             // 
@@ -123,7 +121,6 @@
             this.MaximizeBox = false;
             this.Name = "login";
             this.Text = "Login";
-            this.Load += new System.EventHandler(this.login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
