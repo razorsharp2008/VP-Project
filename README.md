@@ -1,0 +1,1 @@
+An access control mechanism which is used to edit registry values in order to block or allow access to removable storage devices such as USB, Portable HDD, CD, DVD etc.This is done on the same computer as well as remotely on another computer.
